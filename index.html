@@ -6,64 +6,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Favicon -->
     <link rel="icon" href="favicon.ico?" type="image/x-icon">
 
     <!-- Page Title -->
     <title>A Personal Site | James Lee</title>
 
     <!-- Stylesheets -->
-    <!-- <link href="{{ url_for('static', filename='css/jquery.semantic.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway: 300, 600' type='text/css'>
-    <link rel='stylesheet' href='indexStyle.css'/>
+    <link href="static/css/main.css" rel="stylesheet"/>
 </head>
 
 <body>
     <!-- Menu -->
-    <div id="sidebar">
-        <a href="#">
-            <div class="logo"></div>
-        </a>
-        <a href="#">Coding</a>
-        <a href="#">Art</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-    </div>
-
-    <header id="page_header"></header>
+    <nav id="sidebar">
+        <ul>
+            <li>
+                <a class="logo" href="#intro">
+                    <img src="static/images/logo.png"></img>
+                </a>
+            </li>
+            <li><a class="coding"  href="#coding">Coding</a></li>
+            <li><a class="design"  href="#design">Design</a></li>
+            <li><a class="about"   href="#about">About</a></li>
+            <li><a class="contact" href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
     <div id="page_content">
-        <!-- use page templates to load and unload later -->
-        <article id="intro">
-            <div class="half left"></div>
-            <div class="half right"></div>
-        </article>
+        <!-- Intro Section -->
+        <section id="intro"></section>
 
-        <!-- <article id="coding">
-            <div class="half left"></div>
-            <div class="half right"></div>
-        </article>
+        <!-- Coding Section -->
+        <section id="coding" class="pt-moveToLeftFade"></section>
 
-        <article id="art">
-            <div class="half left"></div>
-            <div class="half right"></div>
-        </article>
+        <!-- Design Section -->
+        <section id="design" class="pt-moveToLeftFade"></section>
 
-        <article id="about">
-            <div class="half left"></div>
-            <div class="half right"></div>
-        </article>
+        <!-- About Section -->
+        <section id="about" class="pt-moveToLeftFade"></section>
 
-        <article id="contact">
-            <div class="half left"></div>
-            <div class="half right"></div>
-        </article> -->
+        <!-- Contact Section -->
+        <section id="contact" class="pt-moveToLeftFade"></section>
+
+        <footer id="footer"></footer>
     </div>
 
-    <footer id="page_footer"></footer>
-
     <!-- Scripts -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="app.js"></script>
+    <script src="static/js/jquery-3.2.1.min.js"></script>
+    <script src="static/js/site.js"></script>
 </body>
 </html>

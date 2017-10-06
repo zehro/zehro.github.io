@@ -1,0 +1,129 @@
+// out: ../css/main.css, sourcemap: false, compress: false
+
+// Components
+@import url("components/reset.less");
+@import url("components/typography.less");
+@import url("components/buttons.less");
+@import url("components/lists.less");
+@import url("components/forms.less");
+@import url("components/icons.less");
+
+// Mixins
+@import url( "utils/mixins.less" );
+
+// Animations
+@import url( "utils/animations.less" );
+
+// Theme Variables
+@import url( "utils/theme.less" );
+
+// Common Classes
+@import url( "common.less" );
+
+// Site Styles
+#page_content {
+    order : 0;
+    width : 85%;
+
+    section {
+        height    : 100vh;
+        max-width : ~"calc(100vw - 200px)";
+        position  : absolute;
+        width     : 85%;
+    }
+}
+
+#sidebar {
+    background : @sidebar_color;
+    min-width  : 200px;
+    order      : 1;
+    text-align : center;
+    width      : 15%;
+    z-index    : 10;
+
+    ul {
+        display        : flex;
+        flex-direction : column;
+        height         : 100%;
+        list-style     : none;
+        margin         : 0;
+        padding        : 0;
+
+        a {
+            display        : block;
+            font-size      : 0.8rem;
+            height         : 3.5rem;
+            letter-spacing : 0.2rem;
+            line-height    : 3.5rem;
+            min-width      : 7rem;
+            padding        : 0 1.25rem 0 1.45rem;
+            text-transform : uppercase;
+
+            &:hover {
+                background : fade(white, 20%);
+            }
+
+            &.active {
+                background: white;
+                color: black;
+            }
+        }
+
+        a.logo {
+            padding: 0;
+            height: 10rem;
+
+            img {
+                height: 7rem;
+                width: 7rem;
+                margin-top: 1.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        display: block;
+    }
+
+    #page_content {
+        width: 100%;
+
+        section {
+            max-width : 100vw;
+            width: 100%;
+            height: ~"calc(100vh - 3.5rem)";
+            overflow: hidden;
+        }
+    }
+
+    #sidebar {
+        width: 100%;
+        height: 3.5rem;
+        display: block;
+
+        ul {
+            flex-direction: row;
+
+            a.logo {
+                height: 3.5rem;
+                width: 3.5rem;
+                min-width: 3.5rem;
+
+                img {
+                    height: 2.5rem;
+                    width: 2.5rem;
+                    margin-top: 0.4rem;
+                }
+            }
+        }
+    }
+}
+
+// Other Section Styles
+@import url("main.intro.less");
+@import url("main.coding.less");
+@import url("main.design.less");
+@import url("main.about.less");
+@import url("main.contact.less");
