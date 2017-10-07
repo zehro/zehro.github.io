@@ -61,4 +61,14 @@ function visitPage(page, link) {
             $(page).removeClass();
         }, animationSpeed);
     }
+
+    if (page == '#coding')
+    {
+        setTimeout(function () {
+            $('.fragment').addClass('start');
+        }, animationSpeed);
+        setTimeout(function () {
+            $('.fragment').removeClass('start');
+        }, 8000);
+    }
 }

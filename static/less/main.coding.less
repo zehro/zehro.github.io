@@ -11,8 +11,44 @@
         z-index: 2;
 
         h1 {
-           font-size: 3em;
-           margin: 0;
+            font-size: 3em;
+            margin: 0 0.5rem 0 0;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+       }
+
+       .fragment {
+            margin: 0 auto;
+            text-align: left;
+       }
+
+       #fragment1 {
+            width: 0;
+
+            &.start {
+                animation:
+                    typeDream 2s steps(5, end) 0s,
+                    blink-caret .75s step-end infinite;
+           }
+       }
+       #fragment2 {
+            width: 0;
+
+            &.start {
+                animation:
+                    typeCareer 2s steps(6, end) 2.5s,
+                    blink-caret .75s step-end infinite;
+           }
+       }
+       #fragment3 {
+            &.start {
+                width: 0;
+
+                animation:
+                    typePassion 2s steps(7, end) 5s,
+                    blink-caret .75s step-end infinite;
+           }
        }
     }
 
@@ -22,17 +58,11 @@
         height: 100vh;
 
         &.left {
-            .gradient-animation(
-                linear; 160deg; #0C3D11, #074F0F 45%, #062605;
-                linear; 160deg; #0C3D11, #1A9E1F 45%, #062605;
-                1s);
+            background: #771191;
         }
 
         &.right {
-            .gradient-animation(
-                linear; 135deg; #962E2E, #96903D;
-                linear; 135deg; #FF4E50, #F9D423;
-                1s);
+            background: #4B3696;
         }
 
         h2.major {
@@ -40,21 +70,8 @@
             margin-right: auto;
         }
 
-        .container_items {
-            height: 15%;
-            min-height: 164px;
-            overflow: hidden;
-
-            .item {
-                display: inline-block;
-                padding: 2px 10px;
-                border-radius: 10px;
-                border: 2px solid white;
-                margin: 4px 2px;
-                cursor: default;
-
-                background: fade(black, 50%);
-            }
+        p {
+            text-align: left;
         }
 
         button {
