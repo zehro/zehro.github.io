@@ -6,8 +6,6 @@ var visited = false;
 function initialize() {
     loadTemplates();
     setupNavbar();
-
-    $('.vgdev_carousel').slick();
 }
 
 function loadTemplates() {
@@ -83,6 +81,9 @@ function visitPage(page, link) {
 }
 
 function playCodingTitle() {
+    // Set up carousel
+    $('.vgdev_carousel').slick();
+
     // Toggle the visited bool
     visited = true;
 
