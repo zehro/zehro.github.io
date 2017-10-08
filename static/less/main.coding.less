@@ -21,40 +21,39 @@
        .fragment {
             margin: 0 auto;
             text-align: left;
+            width: 0;
        }
 
        #fragment1 {
-            width: 0;
-
             &.start {
+                border-right: .15em solid white;
                 animation:
-                    typeDream 2s steps(5, end) 0s,
+                    typeDream 2s steps(5, end),
                     blink-caret .75s step-end infinite;
            }
        }
        #fragment2 {
-            width: 0;
-
             &.start {
+                border-right: .15em solid white;
                 animation:
-                    typeCareer 2s steps(6, end) 2.5s,
+                    typeCareer 2s steps(6, end),
                     blink-caret .75s step-end infinite;
            }
        }
        #fragment3 {
             &.start {
-                width: 0;
-
+                width: 5em;
+                border-right: .15em solid white;
                 animation:
-                    typePassion 2s steps(7, end) 5s,
-                    blink-caret .75s step-end infinite;
+                    typePassion 2s steps(7, end),
+                    blink-caret 1s step-end infinite;
            }
        }
     }
 
     .half {
         text-align: center;
-        padding: 25% 4% 0 4%;
+        padding: 16% 4% 0 4%;
         height: 100vh;
 
         &.left {
@@ -72,10 +71,35 @@
 
         p {
             text-align: left;
+
+            &:last-child {
+                margin: 0;
+            }
         }
 
-        button {
-            margin: 20px 0;
+        button.link {
+            margin: 2rem 0;
+        }
+
+        .container {
+            height: 20rem;
+        }
+    }
+
+    .vgdev_carousel {
+        .item {
+            background: black;
+            text-align: center;
+            height: 15rem;
+            display: flex;
+            align-items: center;
+
+            img {
+                display: inline-block;
+                max-width: 90%;
+                max-height: 15rem;
+                margin: 0 auto;
+            }
         }
     }
 }
@@ -88,7 +112,33 @@
         }
 
         .half {
-            padding-top: 200px;
+            padding-top: 120px;
+
+            .container {
+                height: auto;
+                min-height: 22rem;
+            }
+        }
+
+        .vgdev_carousel {
+            .item {
+                height: 12rem;
+
+                img {
+                    max-height: 12rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #coding {
+        .half {
+            .container {
+                height: auto;
+                min-height: 15rem;
+            }
         }
     }
 }
