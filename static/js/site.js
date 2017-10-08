@@ -1,6 +1,7 @@
 $(initialize);
 
 var animationSpeed = 500;
+var delay = 50;
 var visited = false;
 
 function initialize() {
@@ -26,22 +27,27 @@ function loadTemplates() {
 
 function setupNavbar() {
     $('.logo').click(function(e) {
+        e.preventDefault();
         visitPage(e, '#intro', '.logo');
     });
 
     $('.coding').click(function(e) {
+        e.preventDefault();
         visitPage(e, '#coding', '.coding');
     });
 
     $('.design').click(function(e) {
+        e.preventDefault();
         visitPage(e, '#design', '.design');
     });
 
     $('.about').click(function(e) {
+        e.preventDefault();
         visitPage(e, '#about', '.about');
     });
 
     $('.contact').click(function(e) {
+        e.preventDefault();
         visitPage(e, '#contact', '.contact');
     });
 }
@@ -61,12 +67,6 @@ function visitPage(e, page, link) {
 
         // Set the active navbar link
         $('.coding, .design, .about, .contact').removeClass('active');
-
-        // Remove animation classes after animation finishes
-        setTimeout(function () {
-            $(page).removeClass();
-            enableListeners();
-        }, animationSpeed);
     }
     else if ($(page).hasClass('pt-moveToLeftFade'))
     {
@@ -80,13 +80,12 @@ function visitPage(e, page, link) {
         // Set the active navbar link
         $(link).addClass('active');
         $('.coding, .design, .about, .contact').not(link).removeClass('active');
-
-        // Remove animation classes after animation finishes
-        setTimeout(function () {
-            $(page).removeClass();
-            enableListeners();
-        }, animationSpeed);
     }
+    // Remove animation classes after animation finishes
+    setTimeout(function () {
+        $(page).removeClass();
+        enableListeners();
+    }, animationSpeed + delay);
 
     if (page == '#coding' && !visited)
     {

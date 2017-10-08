@@ -1407,8 +1407,10 @@ button.black:hover {
   width: 100%;
   max-width: calc(100vw - 200px);
   text-align: center;
-  margin: 5vh 0;
+  padding: 5vh 0;
   z-index: 2;
+  border-bottom: 2px solid white;
+  background: rgba(0, 0, 0, 0.5);
 }
 #intro header h1 {
   font-size: 3em;
@@ -1512,8 +1514,10 @@ button.black:hover {
   width: 100%;
   max-width: calc(100vw - 200px);
   text-align: center;
-  margin: 5vh 0;
+  padding: 5vh 0;
   z-index: 2;
+  border-bottom: 2px solid white;
+  background: rgba(0, 0, 0, 0.5);
 }
 #coding header h1 {
   font-size: 3em;
