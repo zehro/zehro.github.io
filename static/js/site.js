@@ -8,6 +8,14 @@ function initialize() {
     setupNavbar();
 }
 
+function disableListeners() {
+    $('.logo, .coding, .design, .about, .contact').off("click");
+}
+
+function enableListeners() {
+    setupNavbar();
+}
+
 function loadTemplates() {
     $('#intro').load('templates/main.intro.html');
     $('#coding').load('templates/main.coding.html');
@@ -18,44 +26,49 @@ function loadTemplates() {
 
 function setupNavbar() {
     $('.logo').click(function(e) {
-        e.preventDefault();
-        if ($('#intro').hasClass('pt-moveToRightFade'))
-        {
-            $('#intro').addClass('pt-moveFromRightFade');
-
-            $('#coding, #design, #about, #contact').addClass('pt-moveToLeftFade');
-
-            $('.coding, .design, .about, .contact').removeClass('active');
-
-            setTimeout(function () {
-                $('#intro').removeClass();
-            }, animationSpeed);
-        }
+        visitPage(e, '#intro', '.logo');
     });
 
     $('.coding').click(function(e) {
-        e.preventDefault();
-        visitPage('#coding', '.coding');
+        visitPage(e, '#coding', '.coding');
     });
 
     $('.design').click(function(e) {
-        e.preventDefault();
-        visitPage('#design', '.design');
+        visitPage(e, '#design', '.design');
     });
 
     $('.about').click(function(e) {
-        e.preventDefault();
-        visitPage('#about', '.about');
+        visitPage(e, '#about', '.about');
     });
 
     $('.contact').click(function(e) {
-        e.preventDefault();
-        visitPage('#contact', '.contact');
+        visitPage(e, '#contact', '.contact');
     });
 }
 
-function visitPage(page, link) {
-    if ($(page).hasClass('pt-moveToLeftFade'))
+function visitPage(e, page, link) {
+    e.preventDefault();
+    disableListeners();
+
+    if ($(page).hasClass('pt-moveToRightFade'))
+    {
+        // Move page in
+        $(page).addClass('pt-moveFromRightFade');
+
+        // Move other pages out
+        $('#intro').addClass('pt-moveToRightFade');
+        $('#coding, #design, #about, #contact').addClass('pt-moveToLeftFade');
+
+        // Set the active navbar link
+        $('.coding, .design, .about, .contact').removeClass('active');
+
+        // Remove animation classes after animation finishes
+        setTimeout(function () {
+            $(page).removeClass();
+            enableListeners();
+        }, animationSpeed);
+    }
+    else if ($(page).hasClass('pt-moveToLeftFade'))
     {
         // Move page in
         $(page).addClass('pt-moveFromLeftFade');
@@ -71,6 +84,7 @@ function visitPage(page, link) {
         // Remove animation classes after animation finishes
         setTimeout(function () {
             $(page).removeClass();
+            enableListeners();
         }, animationSpeed);
     }
 
