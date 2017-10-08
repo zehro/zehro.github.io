@@ -3,5 +3,83 @@
 // Contact Section Styles
 #contact {
     .gradient(linear; 180deg; #5e7087 0%, #3e3d77 65%, #4e6e91 100%);
-    padding : 150px 10%;
+
+    header {
+        position: absolute;
+        width: 100%;
+        max-width: ~"calc(100vw - 200px)";
+        text-align: center;
+        padding: 5vh 0;
+        z-index: 2;
+        border-bottom: 2px solid white;
+        background: fade(black, 50%);
+
+        h1 {
+           font-size: 3em;
+           margin: 0;
+       }
+    }
+
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+        padding: 30px;
+        border: 1px solid white;
+        border-radius: 5px;
+        background: fade(black, 30%);
+        transition: 0.3s;
+
+        &:first-of-type {
+            margin-top: 20vh;
+            margin-bottom: 2.5rem;
+        }
+
+        .link {
+            label {
+                display: inline-block;
+                width: 6rem;
+            }
+
+            a {
+                text-decoration: underline;
+            }
+        }
+
+        form {
+            margin: 0;
+
+            .prompt {
+                margin: 1rem 0 0 0;
+                opacity: 0;
+                transition: 0.3s;
+            }
+        }
+
+        input, textarea {
+            &:disabled {
+                opacity: 0.25;
+            }
+        }
+
+        &:not(:first-of-type):hover {
+            background: fade(black, 80%);
+
+            label {
+                opacity: 0.25;
+            }
+
+            .prompt {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #contact {
+        header {
+            width: 100%;
+            max-width: 100vw;
+        }
+    }
 }
