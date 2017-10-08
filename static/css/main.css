@@ -1345,6 +1345,7 @@ button.black:hover {
   padding: 0;
 }
 #sidebar ul a {
+  cursor: pointer;
   display: block;
   font-size: 0.8rem;
   height: 3.5rem;
