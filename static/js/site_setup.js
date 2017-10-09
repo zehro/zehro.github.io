@@ -28,32 +28,31 @@ function loadTemplates() {
 function setupNavbar() {
     $('.logo').click(function(e) {
         e.preventDefault();
-        visitPage(e, '#intro', '.logo');
+        visitPage('#intro', '.logo');
     });
 
     $('.coding').click(function(e) {
         e.preventDefault();
-        visitPage(e, '#coding', '.coding');
+        visitPage('#coding', '.coding');
     });
 
     $('.design').click(function(e) {
         e.preventDefault();
-        visitPage(e, '#design', '.design');
+        visitPage('#design', '.design');
     });
 
     $('.about').click(function(e) {
         e.preventDefault();
-        visitPage(e, '#about', '.about');
+        visitPage('#about', '.about');
     });
 
     $('.contact').click(function(e) {
         e.preventDefault();
-        visitPage(e, '#contact', '.contact');
+        visitPage('#contact', '.contact');
     });
 }
 
-function visitPage(e, page, link) {
-    e.preventDefault();
+function visitPage(page, link) {
     disableListeners();
 
     if ($(page).hasClass('pt-moveToRightFade'))
