@@ -21,8 +21,10 @@
                 1s);
         }
 
-        &::before {
-            height : ~"calc(100% + 5rem)";
+        &.left, &.right {
+            &:before {
+                height : ~"calc(100% + 6rem)";
+            }
         }
 
         .container_items {
