@@ -11,6 +11,11 @@
                 linear; 160deg; #0C3D11, #074F0F 45%, #062605;
                 linear; 160deg; #0C3D11, #1A9E1F 45%, #062605;
                 1s);
+
+            &:before {
+                position : fixed;
+                width    : 40%;
+            }
         }
 
         &.right {
@@ -19,12 +24,16 @@
                 linear; 135deg; #962E2E, #96903D;
                 linear; 135deg; #FF4E50, #F9D423;
                 1s);
+
+            &:before {
+                left     : ~"calc(40% + 10px)";
+                position : fixed;
+                width    : 40%;
+            }
         }
 
         &.left, &.right {
-            &:before {
-                height : ~"calc(100% + 6rem)";
-            }
+
         }
 
         .container_items {

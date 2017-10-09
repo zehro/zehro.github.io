@@ -1499,6 +1499,10 @@ button.black:hover {
 #page_content #intro .half.left:hover:before {
   opacity: 1;
 }
+#page_content #intro .half.left:before {
+  position: fixed;
+  width: 40%;
+}
 #page_content #intro .half.right {
   background: #da7b3b;
   background: -webkit-linear-gradient(-45deg, #962E2E, #96903D);
@@ -1529,9 +1533,10 @@ button.black:hover {
 #page_content #intro .half.right:hover:before {
   opacity: 1;
 }
-#page_content #intro .half.left:before,
 #page_content #intro .half.right:before {
-  height: calc(100% + 6rem);
+  left: calc(40% + 10px);
+  position: fixed;
+  width: 40%;
 }
 #page_content #intro .half .container_items {
   height: 15%;
