@@ -1673,10 +1673,10 @@ button.black:hover {
   height: auto;
 }
 #page_content #design article .half.left {
-  background: #525e6a;
+  background: black;
 }
 #page_content #design article .half.right {
-  background: #444444;
+  background: #222;
 }
 #page_content #design article .half h2 {
   margin-top: 1rem;
