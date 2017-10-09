@@ -1690,12 +1690,21 @@ button.black:hover {
   overflow: hidden;
 }
 #page_content #design article .half .container .item img {
-  width: 100%;
+  width: 90%;
+}
+#page_content #design ::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.5);
 }
 @media screen and (max-width: 1000px) {
   #page_content #design article {
     padding-top: 8.5rem;
   }
+}
+#page_content #about {
+  background: lightseagreen;
+}
+#page_content #about article {
+  padding: 10rem 4% 0 4%;
 }
 #contact {
   background: -webkit-linear-gradient(-90deg, #5e7087 0%, #3e3d77 65%, #4e6e91 100%);
