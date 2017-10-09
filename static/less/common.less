@@ -5,29 +5,29 @@
 
 // Common Class Styles
 body {
-    display: flex;
-    align-content: stretch;
-    align-items: stretch;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    margin: 0;
-    height: 100vh;
-    overflow: hidden;
-    background: black;
+    align-content   : stretch;
+    align-items     : stretch;
+    background      : black;
+    display         : flex;
+    flex-direction  : row;
+    flex-wrap       : nowrap;
+    height          : 100vh;
+    justify-content : flex-start;
+    margin          : 0;
+    overflow        : hidden;
 }
 
 .half {
-    width: 50%;
-    float: left;
+    float : left;
+    width : 50%;
 }
 
 button {
     &.black {
-        background: rgba(0, 0, 0, 0.5);
+        background : rgba(0, 0, 0, 0.5);
 
         &:hover {
-            background: black;
+            background : black;
         }
     }
 }

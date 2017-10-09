@@ -1,138 +1,91 @@
 // main: main.less
 
 // Coding Section Styles
-#coding {
+#page_content #coding {
     header {
-        position: absolute;
-        width: 100%;
-        max-width: ~"calc(100vw - 200px)";
-        text-align: center;
-        padding: 2rem 0;
-        z-index: 2;
-        border-bottom: 2px solid white;
-        background: fade(black, 50%);
-
         h1 {
-            font-size: 3em;
-            margin: 0 0.5rem 0 0;
-            display: inline-block;
-            overflow: hidden;
-            white-space: nowrap;
-       }
-
-       .fragment {
-            margin: 0 auto;
-            text-align: left;
-            width: 0;
-       }
-
-       #fragment1 {
-            &.start {
-                border-right: .15em solid white;
-                animation:
-                    typeDream 2s steps(5, end),
-                    blink-caret .75s step-end infinite;
-           }
-       }
-       #fragment2 {
-            &.start {
-                border-right: .15em solid white;
-                animation:
-                    typeCareer 2s steps(6, end),
-                    blink-caret .75s step-end infinite;
-           }
-       }
-       #fragment3 {
-            &.start {
-                width: 5em;
-                border-right: .15em solid white;
-                animation:
-                    typePassion 2s steps(7, end),
-                    blink-caret 1s step-end infinite;
-           }
-       }
-    }
-
-    .half {
-        text-align: center;
-        padding: 11rem 4% 80px 4%;
-        height: 100vh;
-        overflow-x: hidden;
-        overflow-y: auto;
-
-        &.left {
-            background: #7e3d8e;
-            .gradient(linear; 160deg; #7e3d8e, #3E194F);
-
+            margin     : 0 0.5rem 0 0;
         }
 
-        &.right {
-            background: #2C8E89;
-            .gradient(linear; 180deg; #2C8E89, #5DAD72);
-        }
+        .fragment {
+            margin     : 0 auto;
+            text-align : left;
+            width      : 0;
 
-        h2.major {
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        p {
-            text-align: left;
-
-            &:last-child {
-                margin: 0;
+            &.start {
+                border-right : .15em solid white;
             }
         }
 
-        button.link {
-            margin: 2rem 0;
+        #fragment1.start {
+            animation : typeDream   2s steps(5, end), blink-caret .75s step-end infinite;
         }
-
-        .container {
-            height: 20rem;
+        #fragment2.start {
+            animation : typeCareer  2s steps(6, end), blink-caret .75s step-end infinite;
+        }
+        #fragment3.start {
+            animation : typePassion 2s steps(7, end), blink-caret 1s   step-end infinite;
+            width     : 5em;
         }
     }
 
-    .vgdev_carousel {
-        .item {
-            background: black;
-            text-align: center;
-            height: 15rem;
-            display: flex;
-            align-items: center;
+    .half {
+        padding : 11rem 4% 80px 4%;
 
-            img {
-                display: inline-block;
-                max-width: 90%;
-                max-height: 15rem;
-                margin: 0 auto;
+        &.left {
+            background : #7e3d8e;
+            .gradient(linear; 160deg; #7e3d8e, #3E194F);
+        }
+
+        &.right {
+            background : #2C8E89;
+            .gradient(linear; 180deg; #2C8E89, #5DAD72);
+        }
+
+        p:last-child {
+            margin : 0;
+        }
+
+        .container {
+            height : 20rem;
+
+            .vgdev_carousel {
+                .item {
+                    align-items : center;
+                    background  : black;
+                    display     : flex;
+                    height      : 15rem;
+                    text-align  : center;
+
+                    img {
+                        display    : inline-block;
+                        margin     : 0 auto;
+                        max-height : 15rem;
+                        max-width  : 90%;
+                    }
+                }
             }
         }
     }
 }
 
 @media screen and (max-width: 1000px) {
-    #coding {
-        header {
-            width: 100%;
-            max-width: 100vw;
-        }
-
+    #page_content #coding {
         .half {
-            padding-top: 10rem;
+            padding-top : 10rem;
 
             .container {
-                height: auto;
-                min-height: 22rem;
-            }
-        }
+                height     : auto;
+                min-height : 22rem;
 
-        .vgdev_carousel {
-            .item {
-                height: 12rem;
+                .vgdev_carousel {
+                    .item {
+                        height : 12rem;
 
-                img {
-                    max-height: 12rem;
+                        img {
+                            max-height : 12rem;
+                        }
+                    }
                 }
             }
         }
@@ -140,10 +93,9 @@
 }
 
 @media screen and (max-width: 750px) {
-    #coding {
+    #page_content #coding {
         .half {
             .container {
-                height: auto;
                 min-height: 15rem;
             }
         }
