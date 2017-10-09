@@ -13,6 +13,7 @@
                 1s);
 
             &:before {
+                left     : ~"calc(40% + 10px)";
                 position : fixed;
                 width    : 40%;
             }
@@ -51,10 +52,6 @@
                 padding       : 2px 10px;
             }
         }
-
-        button {
-
-        }
     }
 }
 
@@ -62,6 +59,23 @@
     #page_content #intro {
         .half {
             padding-top : 11rem;
+
+            &.left {
+                &:before {
+                    position : fixed;
+                    top      : 3.5rem;
+                    width    : 50%;
+                }
+            }
+
+            &.right {
+                &:before {
+                    left     : 50%;
+                    position : fixed;
+                    top      : 3.5rem;
+                    width    : 50%;
+                }
+            }
         }
     }
 }

@@ -1500,6 +1500,7 @@ button.black:hover {
   opacity: 1;
 }
 #page_content #intro .half.left:before {
+  left: calc(40% + 10px);
   position: fixed;
   width: 40%;
 }
@@ -1555,6 +1556,17 @@ button.black:hover {
 @media screen and (max-width: 1000px) {
   #page_content #intro .half {
     padding-top: 11rem;
+  }
+  #page_content #intro .half.left:before {
+    position: fixed;
+    top: 3.5rem;
+    width: 50%;
+  }
+  #page_content #intro .half.right:before {
+    left: 50%;
+    position: fixed;
+    top: 3.5rem;
+    width: 50%;
   }
 }
 #page_content #coding header h1 {
