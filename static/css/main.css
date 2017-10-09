@@ -1558,6 +1558,7 @@ button.black:hover {
     padding-top: 11rem;
   }
   #page_content #intro .half.left:before {
+    left: 0;
     position: fixed;
     top: 3.5rem;
     width: 50%;
