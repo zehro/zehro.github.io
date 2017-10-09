@@ -1755,3 +1755,8 @@ button.black:hover {
 #contact .container:not(:first-of-type):hover .prompt {
   opacity: 1;
 }
+@media screen and (max-width: 1000px) {
+  #page_content #contact article {
+    height: calc(100vh - 3.5rem);
+  }
+}
