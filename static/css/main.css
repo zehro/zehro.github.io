@@ -1348,16 +1348,15 @@ button.black:hover {
 }
 #page_content section {
   height: 100vh;
-  max-width: calc(100vw - 200px);
+  max-width: 85%;
   position: absolute;
-  width: 85%;
+  width: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 #page_content section header {
   background: rgba(0, 0, 0, 0.5);
   border-bottom: 2px solid white;
-  max-width: calc(100vw - 200px);
   padding: 2rem 0;
   position: absolute;
   text-align: center;
@@ -1389,7 +1388,6 @@ button.black:hover {
 }
 #sidebar {
   background: black;
-  min-width: 200px;
   order: 1;
   text-align: center;
   width: 15%;
