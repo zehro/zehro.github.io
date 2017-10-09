@@ -1529,6 +1529,9 @@ button.black:hover {
 #page_content #intro .half.right:hover:before {
   opacity: 1;
 }
+#page_content #intro .half::before {
+  height: calc(100% + 5rem);
+}
 #page_content #intro .half .container_items {
   height: 15%;
   min-height: 11.2rem;
